@@ -13,11 +13,11 @@ const Hero = () => {
   ];
 
   return (
-    <section className="min-h-screen py-10 flex md:flex-row flex-col  items-center">
+    <section className="min-h-screen py-10 flex md:flex-row flex-col gap-4 items-center">
       <div className="flex-1 flex items-center justify-center h-full">
         <img src={riyad} alt="photo" className="object-cover" loading="lazy"/>
       </div>
-      <div className="flex-1 ">
+      <div className="flex-1 md:text-left text-center ">
         <h4 className="md:text-5xl text-3xl md:leading-normal leading-10 text-white font-bold">
           <span className="text-sky-600 md:text-6xl text-5xl">
             Hello!

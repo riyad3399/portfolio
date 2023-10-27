@@ -1,4 +1,5 @@
 import "./App.css";
+import About from "./components/About";
 import Bot from "./components/Bot";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Bot />
       <Hero />
+      <About/>
       <Contact />
       <Projects />
       <Skills />

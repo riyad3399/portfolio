@@ -14,3 +14,7 @@ body {
 .btn-primary {
   @apply bg-sky-600 font-semibold px-6 py-2 rounded-full md:mx-0 mx-auto flex items-center gap-2
 }
+
+.aboutImg::after{
+  @apply content-[''] w-full left-0 top-0 rounded-xl rotate-12 h-full absolute bg-zinc-500 -z-10
+}
