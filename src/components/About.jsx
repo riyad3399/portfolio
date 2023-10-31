@@ -1,4 +1,5 @@
 import aboutIMG from "../assets/aboutRiyad.png";
+import { motion } from "framer-motion";
 
 const About = () => {
   const aboutInfo = [
@@ -16,7 +17,21 @@ const About = () => {
         <p className="text-zinc-400 my-3 text-lg">My Introducation</p>
       </div>
       <div className="flex md:flex-row  flex-col-reverse items-center md:gap-6 gap-12 px-10 max-w-6xl mx-auto">
-        <div className="text-center">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 50,
+          }}
+          transition={{
+            duration: 1,
+            ease: "easeInOut",
+          }}
+          className="text-center"
+        >
           <div className="text-zinc-300 my-3">
             <p className="text-justify leading-7 p-2">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -34,7 +49,7 @@ const About = () => {
                     {info.count}
                     <span className="text-sky-500">+</span>{" "}
                   </h4>
-                  <span>{info.text}</span>
+                  <span className="md:text-base text-xs">{info.text}</span>
                 </div>
               ))}
             </div>
@@ -46,8 +61,22 @@ const About = () => {
               <button className="btn-primary mt-5">Download CV</button>
             </a>
           </div>
-        </div>
-        <div className="flex-1 flex justify-center items-center">
+        </motion.div>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 50,
+          }}
+          transition={{
+            duration: 1,
+            ease: "easeInOut",
+          }}
+          className="flex-1 flex justify-center items-center mt-6 "
+        >
           <div className="lg:w-96 h-full relative sm:w-10/12 w-11/12 max-w-sm aboutImg">
             <img
               src={aboutIMG}
@@ -55,7 +84,7 @@ const About = () => {
               className="w-full object-cover bg-sky-600 rounded-lg "
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

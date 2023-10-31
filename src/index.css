@@ -18,3 +18,5 @@ body {
 .aboutImg::after{
   @apply content-[''] w-full left-0 top-0 rounded-xl rotate-12 h-full absolute bg-zinc-500 -z-10
 }
+
+
