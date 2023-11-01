@@ -7,6 +7,8 @@ import {
   SiExpress,
   SiMongodb,
   SiTailwindcss,
+  SiFirebase, 
+  SiRedux
 } from "react-icons/si";
 import {motion} from "framer-motion"
 const Skills = () => {
@@ -36,10 +38,22 @@ const Skills = () => {
       color: "#efd81c",
     },
     {
+      logo: <SiRedux />,
+      level: "Beginner",
+      count: 40,
+      color: "#7248b6",
+    },
+    {
       logo: <SiReact />,
       level: "Intermediate",
       count: 80,
       color: "#5ed3f3",
+    },
+    {
+      logo: <SiFirebase />,
+      level: "Intermediate",
+      count: 80,
+      color: "#efd81c",
     },
     {
       logo: <SiMongodb />,
@@ -62,7 +76,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-10  relative">
+    <section className="py-10  relative " name="skills">
       <div className="mt-10 text-zinc-100 text-center">
         <h3 className="text-4xl font-semibold">
           My <span className="text-sky-600">Skills</span>

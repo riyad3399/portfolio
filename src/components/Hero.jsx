@@ -29,16 +29,16 @@ const Hero = () => {
   ];
 
   return (
-    <section className="min-h-screen py-10 flex md:flex-row flex-col gap-4 items-center">
+    <section name="home" className="min-h-screen py-10 flex md:flex-row flex-col gap-4 items-center">
       <motion.div
         className="flex-1 flex items-center justify-center h-full"
         initial={{
           opacity: 0,
-          y: 0,
+          y: 50,
         }}
         whileInView={{
           opacity: 1,
-          y: 50,
+          y: 0,
         }}
         transition={{
           duration: 1,
@@ -51,11 +51,11 @@ const Hero = () => {
         className="flex-1 md:text-left text-center "
         initial={{
           opacity: 0,
-          y: 0,
+          y: 50,
         }}
         whileInView={{
           opacity: 1,
-          y: 50,
+          y: 0,
         }}
         transition={{
           duration: 1,

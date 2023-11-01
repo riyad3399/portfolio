@@ -1,9 +1,13 @@
 
 const Footer = () => {
+
+    const date = new Date().getFullYear()
+    console.log(date);
+
     return (
-        <div>
-            <h3>Footer</h3>
-        </div>
+      <div className="bg-zinc-800 text-sm p-4 text-center text-white">
+        Copyright © {date} Riyad khan. All Right reserved.
+      </div>
     );
 };
 

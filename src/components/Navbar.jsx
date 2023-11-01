@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenuUnfold } from "react-icons/ai";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -10,11 +11,11 @@ const Navbar = () => {
   };
 
   const menuLinks = [
-    { name: "HOME", link: "#home" },
-    { name: "ABOUT", link: "#about" },
-    { name: "SKILLS", link: "#skills" },
-    { name: "PROJECTS", link: "#projects" },
-    { name: "CONTACT", link: "#contact" },
+    { name: "HOME", link: "home" },
+    { name: "ABOUT", link: "about" },
+    { name: "SKILLS", link: "skills" },
+    { name: "PROJECTS", link: "projects" },
+    { name: "CONTACT", link: "contact" },
   ];
 
   useEffect(() => {
@@ -37,7 +38,7 @@ const Navbar = () => {
           </h4>
         </div>
         <div
-          className={`text-gray-900 md:block hidden px-6 py-2 font-medium ${
+          className={`text-gray-900 md:block hidden px-6 py-3 font-medium ${
             sticky ? "md:bg-white/0 bg-white" : "bg-white"
           } rounded-tl-full rounded-br-full `}
         >
@@ -75,7 +76,9 @@ const Navbar = () => {
           <ul className="flex flex-col h-full gap-8 py-2 text-lg">
             {menuLinks.map((menu, i) => (
               <li key={i} className="px-6 hover:text-sky-600">
-                <a href={menu.link}>{menu.name}</a>
+                <Link to={menu.link} smooth duration={500}>
+                  {menu.name}
+                </Link>
               </li>
             ))}
           </ul>

@@ -1,5 +1,6 @@
 import aboutIMG from "../assets/aboutRiyad.png";
 import { motion } from "framer-motion";
+import resume from "../assets/resume.pdf"
 
 const About = () => {
   const aboutInfo = [
@@ -9,7 +10,7 @@ const About = () => {
   ];
 
   return (
-    <section className="py-10 text-white">
+    <section name="about" className="py-10 text-white">
       <div className="mt-8 text-center">
         <h4 className="font-semibold text-4xl">
           About <span className="text-sky-600">Me</span>
@@ -20,11 +21,11 @@ const About = () => {
         <motion.div
           initial={{
             opacity: 0,
-            y: 0,
+            y: 50,
           }}
           whileInView={{
             opacity: 1,
-            y: 50,
+            y: 0,
           }}
           transition={{
             duration: 1,
@@ -53,23 +54,19 @@ const About = () => {
                 </div>
               ))}
             </div>
-            <a
-              href="https://drive.google.com/file/d/1hr5eqD9JWfEeLmp5pXo_UonayYLhER4j/view?usp=drive_link"
-              download
-              target="_blank"
-            >
-              <button className="btn-primary mt-5">Download CV</button>
+            <a href={resume} download={true} target="_blank">
+              <button className="btn-primary mt-5">Download Resume</button>
             </a>
           </div>
         </motion.div>
         <motion.div
           initial={{
             opacity: 0,
-            y: 0,
+            y: 50,
           }}
           whileInView={{
             opacity: 1,
-            y: 50,
+            y: 0,
           }}
           transition={{
             duration: 1,

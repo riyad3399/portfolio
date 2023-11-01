@@ -33,7 +33,7 @@ const myProjects = [
 
 const Projects = () => {
   return (
-    <section className="py-10 text-white">
+    <section name="projects" className="py-10 text-white">
       <motion.div
         initial={{
           opacity: 0,
@@ -105,12 +105,14 @@ const Projects = () => {
                   <div className="flex gap-3">
                     <a
                       href={project.githubLink}
+                      target="_blank"
                       className="text-sky-600 bg-zinc-800 px-2 py-1 rounded-lg inline-block"
                     >
                       Github
                     </a>
                     <a
                       href={project.liveLink}
+                      target="_blank"
                       className="text-sky-600 bg-zinc-800 px-2 py-1 rounded-lg inline-block"
                     >
                       Live Demo

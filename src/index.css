@@ -23,3 +23,15 @@ body {
 .swiper-pagination-bullet{
   @apply bg-white
 }
+
+input, textarea {
+  @apply bg-zinc-700 outline-none p-3 rounded-lg
+}
+
+::placeholder{
+  @apply text-lg
+}
+
+::selection{
+  @apply bg-sky-600
+}
