@@ -6,11 +6,11 @@ const Hireme = () => {
       <motion.div
         initial={{
           opacity: 0,
-          y: 0,
+          y: 50,
         }}
         whileInView={{
           opacity: 1,
-          y: 20,
+          y: 0,
         }}
         transition={{
           duration: 1,
@@ -62,8 +62,9 @@ const Hireme = () => {
             ease: "easeInOut",
           }}
           src={hireme}
-          alt=""
+          alt="hiremePhoto"
           className="md:absolute bottom-0 -right-20 object-cover "
+          loading="lazy"
         />
       </div>
     </section>

@@ -4,7 +4,7 @@ import {
   SlSocialGithub,
   SlSocialFacebook,
 } from "react-icons/sl";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const social_media = [
@@ -12,24 +12,24 @@ const Hero = () => {
       icon: <SlSocialFacebook />,
       title: "Facebook",
       link: "https://www.facebook.com/md.riyadkhan3399/",
-      color: "#0866ff",
     },
     {
       icon: <SlSocialGithub />,
       title: "Github",
       link: "https://github.com/riyad3399",
-      color: "#1f2328",
     },
     {
       icon: <SlSocialLinkedin />,
       title: "Linkedin",
       link: "https://www.linkedin.com/in/md-riyad-khan-317537283/",
-      color: "#0a66c2",
     },
   ];
 
   return (
-    <section name="home" className="min-h-screen py-10 flex md:flex-row flex-col gap-4 items-center">
+    <section
+      name="home"
+      className="min-h-screen py-10 flex md:flex-row flex-col gap-4 items-center"
+    >
       <motion.div
         className="flex-1 flex items-center justify-center h-full"
         initial={{
@@ -79,10 +79,8 @@ const Hero = () => {
               key={i}
               title={sm.title}
               href={sm.link}
-              className=" text-2xl rounded-full p-2 text-white"
-              style={{
-                backgroundColor: `${sm.color}`,
-              }}
+              className={`text-2xl rounded-full p-2 text-white border hover:bg-sky-600/10  duration-300`}
+              target="_blank"
             >
               {sm.icon}
             </a>

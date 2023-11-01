@@ -1,6 +1,7 @@
 import aboutIMG from "../assets/aboutRiyad.png";
 import { motion } from "framer-motion";
 import resume from "../assets/resume.pdf"
+import {AiOutlineDownload} from "react-icons/ai"
 
 const About = () => {
   const aboutInfo = [
@@ -54,8 +55,10 @@ const About = () => {
                 </div>
               ))}
             </div>
-            <a href={resume} download={true} target="_blank">
-              <button className="btn-primary mt-5">Download Resume</button>
+            <a href={resume} download={true}>
+              <button className="btn-primary mt-5">
+                <AiOutlineDownload size={22}/> Download Resume
+              </button>
             </a>
           </div>
         </motion.div>
@@ -79,6 +82,7 @@ const About = () => {
               src={aboutIMG}
               alt="about photo"
               className="w-full object-cover bg-sky-600 rounded-lg "
+              loading="lazy"
             />
           </div>
         </motion.div>

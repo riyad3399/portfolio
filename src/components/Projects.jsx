@@ -100,6 +100,7 @@ const Projects = () => {
                     className="rounded-lg"
                     src={project.img}
                     alt={project.name}
+                    loading="lazy"
                   />
                   <h3 className="text-lg md:my-4 my-2">{project.name} </h3>
                   <div className="flex gap-3">

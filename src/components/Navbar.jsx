@@ -33,9 +33,11 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between">
         <div className="mx-7">
-          <h4 className="text-4xl font-bold uppercase ">
-            R<span className="text-sky-600 ">iya</span>d
-          </h4>
+          <Link to="home" smooth={true} duration={500}>
+            <h4 className="text-4xl font-bold uppercase cursor-pointer">
+              R<span className="text-sky-600 ">iya</span>d
+            </h4>
+          </Link>
         </div>
         <div
           className={`text-gray-900 md:block hidden px-6 py-3 font-medium ${
@@ -44,8 +46,13 @@ const Navbar = () => {
         >
           <ul className="flex items-center gap-1 py-2 text-lg">
             {menuLinks?.map((menu, i) => (
-              <li key={i} className="px-6 hover:text-sky-600">
-                <a href={menu.link}>{menu.name}</a>
+              <li
+                key={i}
+                className={`px-6 cursor-pointer text-zinc-800 hover:text-sky-600 duration-200 font-medium`}
+              >
+                <Link smooth={true} duration={500} to={menu?.link}>
+                  {menu?.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -75,9 +82,12 @@ const Navbar = () => {
         >
           <ul className="flex flex-col h-full gap-8 py-2 text-lg">
             {menuLinks.map((menu, i) => (
-              <li key={i} className="px-6 hover:text-sky-600">
-                <Link to={menu.link} smooth duration={500}>
-                  {menu.name}
+              <li
+                key={i}
+                className={`px-6 cursor-pointer text-zinc-800 hover:text-sky-600 duration-200 font-medium`}
+              >
+                <Link smooth={true} duration={500} to={menu?.link}>
+                  {menu?.name}
                 </Link>
               </li>
             ))}
