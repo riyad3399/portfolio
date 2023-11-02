@@ -1,7 +1,7 @@
 import aboutIMG from "../assets/aboutRiyad.png";
 import { motion } from "framer-motion";
-import resume from "../assets/resume.pdf"
-import {AiOutlineDownload} from "react-icons/ai"
+import resume from "../assets/resume.pdf";
+import { AiOutlineDownload } from "react-icons/ai";
 
 const About = () => {
   const aboutInfo = [
@@ -12,7 +12,7 @@ const About = () => {
 
   return (
     <section name="about" className="py-10 text-white">
-      <div className="mt-8 text-center">
+      <div className="mt-8 mb-10 text-center">
         <h4 className="font-semibold text-4xl">
           About <span className="text-sky-600">Me</span>
         </h4>
@@ -36,13 +36,13 @@ const About = () => {
         >
           <div className="text-zinc-300 my-3">
             <p className="text-justify leading-7 p-2">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Perspiciatis quas ullam recusandae error esse molestias facilis
-              provident quae aliquam fugiat aperiam maxime magnam suscipit
-              repellat fugit cum laudantium culpa, nesciunt, et quo. Laborum
-              iste commodi asperiores animi consequatur, modi doloremque
-              necessitatibus quibusdam eos expedita porro pariatur perspiciatis
-              aliquam repellat esse!
+              I'm a passionate frontend web developer with a keen eye for
+              creating visually appealing and highly functional websites. My
+              journey in the world of web development began with a fascination
+              for turning creative ideas into interactive digital experiences.
+              Since then, I've dedicated myself to mastering the art of
+              front-end development, constantly staying up-to-date with the
+              latest trends and technologies in the field.
             </p>
             <div className="flex gap-8 mt-10 items-center">
               {aboutInfo.map((info, i) => (
@@ -55,11 +55,13 @@ const About = () => {
                 </div>
               ))}
             </div>
-            <a href={resume} download={true}>
-              <button className="btn-primary mt-5">
-                <AiOutlineDownload size={22}/> Download Resume
-              </button>
-            </a>
+            <div className="flex justify-start">
+              <a href={resume} download={true}>
+                <button className="btn-primary mt-5 ">
+                  <AiOutlineDownload size={22} /> Download Resume
+                </button>
+              </a>
+            </div>
           </div>
         </motion.div>
         <motion.div

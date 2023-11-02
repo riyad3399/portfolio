@@ -1,7 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import Swal from "sweetalert2";
-import {motion} from "framer-motion"
+import Animotion from "../animotionComponents/Animotion";
 
 const Contact = () => {
   const form = useRef();
@@ -43,51 +43,39 @@ const Contact = () => {
         </h3>
         <p className="text-zinc-400 mt-3 text-lg">Get in touch</p>
 
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 50,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-            ease: "easeInOut",
-          }}
-          className="mt-16 flex md:flex-row flex-col gap-6 max-w-5xl mx-auto bg-zinc-800 p-6 rounded-lg"
-        >
-          <form
-            className="flex flex-col flex-1 gap-5"
-            ref={form}
-            onSubmit={sendEmail}
-          >
-            <input
-              type="text"
-              placeholder="Your Name"
-              name="from_name"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              name="from_email"
-              required
-            />
-            <textarea
-              placeholder="Your Message"
-              rows={10}
-              name="message"
-              required
-            ></textarea>
-            <input
-              type="submit"
-              value="Send Message"
-              className="w-fit btn-primary"
-            />
-          </form>
-        </motion.div>
+        <Animotion>
+          <div className="mt-16 flex md:flex-row flex-col gap-6 max-w-5xl mx-auto bg-zinc-800 p-6 rounded-lg">
+            <form
+              className="flex flex-col flex-1 gap-5"
+              ref={form}
+              onSubmit={sendEmail}
+            >
+              <input
+                type="text"
+                placeholder="Your Name"
+                name="from_name"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                name="from_email"
+                required
+              />
+              <textarea
+                placeholder="Your Message"
+                rows={10}
+                name="message"
+                required
+              ></textarea>
+              <input
+                type="submit"
+                value="Send Message"
+                className="w-fit btn-primary"
+              />
+            </form>
+          </div>
+        </Animotion>
       </div>
     </section>
   );

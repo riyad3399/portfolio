@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import img1 from "../assets/img2.png";
 import img2 from "../assets/img1.png";
 import img3 from "../assets/img3.png";
+import Animotion from "../animotionComponents/Animotion";
 
 const myProjects = [
   {
@@ -34,26 +35,14 @@ const myProjects = [
 const Projects = () => {
   return (
     <section name="projects" className="py-10 text-white">
-      <motion.div
-        initial={{
-          opacity: 0,
-          y: 50,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 1,
-          ease: "easeInOut",
-        }}
-        className="text-center"
-      >
-        <h3 className="text-4xl font-semibold">
-          My <span className="text-sky-600">Projects</span>
-        </h3>
-        <p className="text-zinc-400 mt-3 text-lg">My awesome works</p>
-      </motion.div>
+      <Animotion>
+        <div className="text-center mb-5">
+          <h3 className="text-4xl font-semibold">
+            My <span className="text-sky-600">Projects</span>
+          </h3>
+          <p className="text-zinc-400 mt-3 text-lg">My awesome works</p>
+        </div>
+      </Animotion>
       <br />
       <div className="flex max-w-6xl  px-5 mx-auto items-center relative">
         <motion.div
