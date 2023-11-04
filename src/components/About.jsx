@@ -12,7 +12,7 @@ const About = () => {
 
   return (
     <section name="about" className="py-10 text-white">
-      <div className="mt-8 mb-10 text-center">
+      <div className=" mb-10 text-center">
         <h4 className="font-semibold text-4xl">
           About <span className="text-sky-600">Me</span>
         </h4>
@@ -55,7 +55,7 @@ const About = () => {
                 </div>
               ))}
             </div>
-            <div className="flex justify-start">
+            <div className="flex sm:justify-start justify-center">
               <a href={resume} download={true}>
                 <button className="btn-primary mt-5 ">
                   <AiOutlineDownload size={22} /> Download Resume

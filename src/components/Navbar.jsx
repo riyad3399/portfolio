@@ -20,7 +20,7 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      const nav = document.querySelector("nav");
+       document.querySelector("nav");
       window.scrollY > 0 ? setSticky(true) : setSticky(false);
     });
   }, []);
@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full left-0 top-0 z-[999] ${
-        sticky ? "bg-white/60 text-gray-900" : "text-white"
+        sticky ? "bg-white/60 text-gray-900" : "text-[#ffff]"
       }`}
     >
       <div className="flex items-center justify-between">
@@ -48,7 +48,7 @@ const Navbar = () => {
             {menuLinks?.map((menu, i) => (
               <li
                 key={i}
-                className={`px-6 cursor-pointer text-zinc-800 hover:text-sky-600 duration-200 font-medium`}
+                className={`px-6 cursor-pointer text-zinc-800 hover:text-sky-600 duration-300 font-medium`}
               >
                 <Link smooth={true} duration={500} to={menu?.link}>
                   {menu?.name}
@@ -76,7 +76,7 @@ const Navbar = () => {
           )}
         </div>
         <div
-          className={`md:hidden text-gray-900 absolute w-1/2  h-screen px-7 py-2 font-medium bg-white top-0 right-0 ${
+          className={`md:hidden text-gray-900 absolute w-1/2  h-screen px-6 py-3 font-medium bg-white top-0 right-0 ${
             isOpen ? "right-0" : "right-[-100%]"
           }`}
         >

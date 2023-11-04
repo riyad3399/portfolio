@@ -7,10 +7,11 @@ import {
   SiExpress,
   SiMongodb,
   SiTailwindcss,
-  SiFirebase, 
-  SiRedux
+  SiFirebase,
+  SiRedux,
+  SiBootstrap,
 } from "react-icons/si";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 const Skills = () => {
   const skills = [
     {
@@ -31,6 +32,13 @@ const Skills = () => {
       count: 85,
       color: "#07b0ce",
     },
+    {
+      logo: <SiBootstrap />,
+      level: "Advance",
+      count: 85,
+      color: "#7111f5",
+    },
+
     {
       logo: <SiJavascript />,
       level: "Advance",
@@ -53,7 +61,7 @@ const Skills = () => {
       logo: <SiFirebase />,
       level: "Intermediate",
       count: 80,
-      color: "#efd81c",
+      color: "#ffcc30",
     },
     {
       logo: <SiMongodb />,
@@ -83,7 +91,7 @@ const Skills = () => {
         </h3>
         <p className="text-zinc-400 mt-3 text-lg">My Knowledge</p>
       </div>
-      <div className="flex items-center justify-center  mt-12 gap-10 flex-wrap ">
+      <div className="flex items-center justify-center  mt-12 gap-10 flex-wrap">
         {skills.map((skill, i) => (
           <motion.div
             initial={{
@@ -99,16 +107,17 @@ const Skills = () => {
               ease: "easeInOut",
             }}
             key={i}
-            className="border-2 border-sky-600 relative min-w-[10rem] max-w-[16rem] bg-zinc-900 p-10 rounded-xl"
+            className="border-2 hover:animate-pulse relative min-w-[10rem] max-w-[16rem] bg-zinc-900 p-10 rounded-xl "
+            style={{ borderColor: `${skill.color}` }}
           >
             <div
               style={{
-                background: `conic-gradient(rgb(8, 145, 170) ${skill.count}%, #ddd ${skill.count}%)`,
+                background: `conic-gradient(rgb(8, 150, 180) ${skill.count}%, #ddd ${skill.count}%)`,
               }}
-              className="w-32 h-32 flex items-center justify-center rounded-full group"
+              className="w-32 h-32 flex items-center justify-center rounded-full "
             >
               <div
-                className="text-6xl h-28 w-28 bg-zinc-900 rounded-full flex items-center justify-center group-hover:text-sky-600"
+                className="text-6xl h-28 w-28 bg-zinc-900 rounded-full flex items-center justify-center  "
                 style={{ color: `${skill.color}` }}
               >
                 {skill.logo}

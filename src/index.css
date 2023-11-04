@@ -12,26 +12,67 @@ body {
 }
 
 .btn-primary {
-  @apply bg-sky-600 font-semibold px-6 py-2 rounded-full md:mx-0 mx-auto flex items-center gap-2
+  @apply bg-sky-600 font-semibold px-6 py-2 rounded-full md:mx-0 mx-auto flex items-center gap-2;
 }
 
-.aboutImg::after{
-  @apply content-[''] w-full left-0 top-0 rounded-xl rotate-12 h-full absolute bg-zinc-500 -z-10
+.aboutImg::after {
+  @apply content-[''] w-full left-0 top-0 rounded-xl rotate-12 h-full absolute bg-zinc-500 -z-10;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-white;
+}
+
+input,
+textarea {
+  @apply bg-zinc-700 outline-none p-3 rounded-lg;
+}
+
+::placeholder {
+  @apply text-lg;
+}
+
+::selection {
+  @apply bg-sky-600;
+}
+
+.btn-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.btn-sci a:hover {
+  color: black;
+  font-weight: 700;
+}
+
+.btn-sci a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn-sci a:hover:before {
+  width: 100%;
 }
 
 
-.swiper-pagination-bullet{
-  @apply bg-white
-}
-
-input, textarea {
-  @apply bg-zinc-700 outline-none p-3 rounded-lg
-}
-
-::placeholder{
-  @apply text-lg
-}
-
-::selection{
-  @apply bg-sky-600
-}
